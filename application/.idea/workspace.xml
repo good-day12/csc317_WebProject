@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/html/postimage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/html/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/html/viewimage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added all files necessary for assignment">
+      <change beforePath="$PROJECT_DIR$/public/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/postimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/postimage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/viewimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/viewimage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +58,16 @@
       <option name="presentableId" value="Default" />
       <updated>1663172981057</updated>
       <workItem from="1663172984724" duration="67000" />
-      <workItem from="1663272361791" duration="2949000" />
+      <workItem from="1663272361791" duration="3400000" />
     </task>
+    <task id="LOCAL-00001" summary="Added all files necessary for assignment">
+      <created>1663280421523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663280421523</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added all files necessary for assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added all files necessary for assignment" />
   </component>
 </project>
