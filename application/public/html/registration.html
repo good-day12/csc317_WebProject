@@ -6,18 +6,53 @@
 </head>
 <body>
 <header> <!-- Opening tag <text> -->
-    <h1> Login Form</h1>
+    <h1> Registration </h1>
     <nav> <!-- This is our nav bar -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="index.html">Registration</a></li>
-            <li><a href="index.html">Post Image</a></li>
-            <li><a href="index.html">View Posts</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="postimage.html">Post Image</a></li>
+            <li><a href="viewposts.html">View Posts</a></li>
         </ul>
     </nav>
 </header><!-- Closing tag <\text> -->
 
+<section>
+    <h1>Please enter the following information to register</h1>
+
+    <form>
+
+        <label for ="email">email</label> <!-- the email input field -->
+        <input type = "email" name = "email" id = email placeholder="email">
+
+        <label for ="username">Username</label> <!-- the username input field -->
+        <input type = "text" name = "username" id = Username placeholder="Username">
+
+        <br> <br> <!-- two line breaks for aesthetics -->
+
+        <label for ="password">Password</label> <!-- the password input field -->
+        <input type = "password" name = "password" id = password placeholder="password">
+
+        <label for ="confirmPassword">Confirm Password</label> <!-- the password input field -->
+        <input type = "password" name = "Confirm Password" id = confirmPassword placeholder="confirm password">
+
+        <br> <br> <!-- two line breaks for aesthetics -->
+
+        <label for ="confirmAge">Confirm you are 13 years or older</label>
+        <input type = "checkbox" id = confirmAge>
+
+        <br> <br> <!-- two line breaks for aesthetics -->
+
+        <input type = "submit" value = "TOS and Privacy Rules" > <!-- The TOS and Privacy button -->
+
+        <br> <br> <!-- two line breaks for aesthetics -->
+
+        <input type = "submit" value = "Submit" > <!-- The submit button -->
+
+    </form>
+
+</section>
 
 </body>
 </html>
