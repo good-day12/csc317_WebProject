@@ -9,7 +9,7 @@
     <h1> Registration </h1>
     <nav> <!-- This is our nav bar -->
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" rel = "noopener noreffere">Home</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="postimage.html">Post Image</a></li>
@@ -18,7 +18,7 @@
     </nav>
 </header><!-- Closing tag <\text> -->
 
-<section>
+<main>
     <h1>Please enter the following information to register</h1>
 
     <form>
@@ -35,12 +35,12 @@
         <input type = "password" name = "password" id = password placeholder="password">
 
         <label for ="confirmPassword">Confirm Password</label> <!-- the password input field -->
-        <input type = "password" name = "Confirm Password" id = confirmPassword placeholder="confirm password">
+        <input type = "password" name = "confirmPassword" id = confirmPassword placeholder="confirm password">
 
         <br> <br> <!-- two line breaks for aesthetics -->
 
         <label for ="confirmAge">Confirm you are 13 years or older</label>
-        <input type = "checkbox" id = confirmAge>
+        <input type = "checkbox" name = "confirmAge" id = confirmAge>
 
         <br> <br> <!-- two line breaks for aesthetics -->
 
@@ -48,11 +48,13 @@
 
         <br> <br> <!-- two line breaks for aesthetics -->
 
-        <input type = "submit" value = "Submit" > <!-- The submit button -->
+        <input type = "submit" value = "Submit" ><!-- The submit button
+         <input type = "submit" >
+         <button type = "submit" ></button>-->
 
     </form>
 
-</section>
+</main>
 
 </body>
 </html>
