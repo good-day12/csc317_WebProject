@@ -5,7 +5,7 @@ body {
 
 h1 {
   color: greenyellow;
-  background-color: black;
+  background-color: gray;
   border: 1px solid black;
 }
 
@@ -14,5 +14,5 @@ p {
 }
 
 a {
-  color: #00B7FF;
+  color: coral;
 }
