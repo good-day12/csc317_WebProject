@@ -33,6 +33,10 @@ ul {
   background-color: darkgray;
 }
 
+.favorite {
+  color: darkred;
+}
+
 p {
   color: blue;
 }
