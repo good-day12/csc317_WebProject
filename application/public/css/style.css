@@ -1,8 +1,9 @@
-html {background-color: darkgray }
+html {background-color: darkgray;}
 
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 h1 { /*This should be the overall header for the webpage itself*/
@@ -23,8 +24,6 @@ header{
 
 li {
   float: left; /*this gets our navbar horizontal*/
-
-
 }
 
 ul {
@@ -34,6 +33,7 @@ ul {
   padding:0;
   size: landscape;
   background-color: darkgray;
+  display: inline-block; /*centers the navbar, along with text-align center in body*/
 }
 
 .favorite {
@@ -42,6 +42,10 @@ ul {
 
 p {
   color: black;
+}
+
+.timePosted {
+
 }
 
 a {
