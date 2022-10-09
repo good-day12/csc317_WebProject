@@ -25,6 +25,15 @@ h1 { /*This should be the overall header for the webpage itself*/
   text-align: center;
 }
 
+.container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "mcontent"
+    "footer";
+}
+
  .nav-unorderedList {
    list-style-type: none;
    display: flex;
@@ -35,6 +44,7 @@ h1 { /*This should be the overall header for the webpage itself*/
    align-items: center;
    gap: 1rem;
    flex: 1 75px;
+   grid-area: header;
 }
  .nav-unorderedList li{
    background-color: var(--secondaryBackGround);
@@ -77,7 +87,38 @@ a {
 
 section {
   padding: 10px
+}
 
+.post {
+  grid-area: mcontent;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "postTitle postAuthor"
+    "postPicture postPicture"
+    "postDes postDes"
+    "timePosted timePosted";
+}
+
+.postTitle {
+  grid-area: postTitle;
+}
+
+.postAuthor {
+  grid-area: postAuthor;
+}
+
+.postPicture{
+  grid-area: postPicture;
+  justify-self: center;
+}
+
+.postDes{
+  grid-area: postDes;
+}
+
+.timePosted{
+  grid-area: timePosted;
 }
 
 input {
@@ -86,5 +127,6 @@ text-align: center;
 
 footer {
   text-align: center;
+  grid-area: footer;
 }
 
