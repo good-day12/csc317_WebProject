@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added CSS styling to all html files, does not work">
+    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added CSS styling to all html files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/viewposts.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/viewposts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,10 @@
       <workItem from="1663702138217" duration="3067000" />
       <workItem from="1664306806390" duration="2852000" />
       <workItem from="1664388808094" duration="2496000" />
-      <workItem from="1664391789675" duration="583000" />
+      <workItem from="1664391789675" duration="1048000" />
+      <workItem from="1664912685018" duration="1070000" />
+      <workItem from="1665084516495" duration="650000" />
+      <workItem from="1665289348932" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="Added all files necessary for assignment">
       <created>1663280421523</created>
@@ -104,7 +108,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664391185067</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added CSS styling to all html files">
+      <created>1664392495098</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664392495098</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added CSS styling to all html files">
+      <created>1664392542644</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664392542644</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added CSS styling to all html files">
+      <created>1664392671776</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664392671777</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,8 +150,8 @@
     <MESSAGE value="Added all files necessary for assignment" />
     <MESSAGE value="Added nav bar to all files" />
     <MESSAGE value="Added notes from class 9/20" />
-    <MESSAGE value="Added CSS styling to all html files" />
     <MESSAGE value="Added CSS styling to all html files, does not work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CSS styling to all html files, does not work" />
+    <MESSAGE value="Added CSS styling to all html files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CSS styling to all html files" />
   </component>
 </project>
