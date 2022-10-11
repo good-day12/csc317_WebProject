@@ -130,3 +130,10 @@ footer {
   grid-area: footer;
 }
 
+.invalid-text{
+  outline: solid red;
+}
+
+.valid-text{
+  outline: solid green;
+}
