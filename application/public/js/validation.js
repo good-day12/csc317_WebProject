@@ -14,18 +14,15 @@ console.log('printing from external file') //great way for stepway refinement, d
 //     console.log(document.getElementsByTagName('body'));
 // }) use defer in script tag to avoid using this
 
-document.getElementById('username').addEventListener('input', function(ev){
+document.getElementById('Username').addEventListener('input', function(ev){
     let usernameElement = ev.target;
     let username = usernameElement.value; //can use var, var is global scope, let is block scope
     if(username.length > 3){
         usernameElement.classList.add('valid-text');
         usernameElement.classList.remove('invalid-text');
-        //usernameElement.classList.toggle('valid-text'); can't be used here
-
     }else {
         usernameElement.classList.add('invalid-text');
         usernameElement.classList.remove('valid-text');
-
     };
 //    console.log(ev.currentTarget); //will get everything in div
 
