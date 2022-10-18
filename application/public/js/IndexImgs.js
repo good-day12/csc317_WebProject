@@ -9,7 +9,7 @@ function buildCardsUsingDOMAPI(container, data){ //conatiner is product lists
     cardDiv.setAttribute('class', 'img-card');
 
     let imgElement = document.createElement('img');
-    imgElement.setAttribute('src', data.thumbnailUrl);
+    imgElement.setAttribute('src', data.url);
     imgElement.setAttribute('class', 'img');
 
     let title = document.createElement('p');
@@ -18,8 +18,9 @@ function buildCardsUsingDOMAPI(container, data){ //conatiner is product lists
 
 
     //now to link these statemnts together, do it backwards
-    cardDiv.appendChild(imgElement);
     cardDiv.appendChild(title);
+
+    cardDiv.appendChild(imgElement);
 
     container.appendChild(cardDiv);
 }
@@ -31,8 +32,8 @@ function fetchProducts(){
             return response.json();
         })
         .then(function(data){
-            let photos = data.title; //<-----------what is it called?
-            let container = document.getElementById('product-list');
+            let photos = data; //<-----------what is it called?
+            let container = document.getElementById('img-list');
             let containerFragment = document.createDocumentFragment();
             photos.forEach(function(img) {
                 buildCardsUsingDOMAPI(container, img);

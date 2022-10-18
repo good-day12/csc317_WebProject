@@ -165,12 +165,17 @@ footer {
   border-radius: .35rem;
   object-fit: cover;
 
+  opacity: 75%
 }
 
 
 .img-title {
+  grid-area: info;
   margin: 0;
   background-color: transparent;
   flex: 1;
   overflow: hidden;
+  z-index: 1; /* to make text on top*/
+  justify-self: center;
+  align-self: end;
 }
