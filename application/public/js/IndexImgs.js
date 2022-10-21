@@ -16,11 +16,10 @@ function buildCardsUsingDOMAPI(container, data){ //conatiner is product lists
     title.setAttribute('class', 'img-title');
     title.appendChild(document.createTextNode(data.title));
 
-
-    //now to link these statemnts together, do it backwards
-    cardDiv.appendChild(title);
+    //now to link these statements together, do it backwards
 
     cardDiv.appendChild(imgElement);
+    cardDiv.appendChild(title);
 
     container.appendChild(cardDiv);
 }

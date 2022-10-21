@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added JavaScript files, notes from class Oct 11th">
+    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added JavaScript, notes from class Oct 13th">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/html/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/IndexImgs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/IndexImgs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,10 @@
       <workItem from="1665289348932" duration="2781000" />
       <workItem from="1665517165114" duration="2698000" />
       <workItem from="1665522591453" duration="479000" />
-      <workItem from="1665689283803" duration="3603000" />
+      <workItem from="1665689283803" duration="3714000" />
+      <workItem from="1666147915867" duration="91000" />
+      <workItem from="1666294507344" duration="10000" />
+      <workItem from="1666294590776" duration="3010000" />
     </task>
     <task id="LOCAL-00001" summary="Added all files necessary for assignment">
       <created>1663280421523</created>
@@ -151,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665689330055</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added JavaScript, notes from class Oct 13th">
+      <created>1665693707854</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665693707854</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +198,7 @@
     <MESSAGE value="Added CSS styling to all html files, does not work" />
     <MESSAGE value="Added CSS styling to all html files" />
     <MESSAGE value="Added JavaScript files, notes from class Oct 11th" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JavaScript files, notes from class Oct 11th" />
+    <MESSAGE value="Added JavaScript, notes from class Oct 13th" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JavaScript, notes from class Oct 13th" />
   </component>
 </project>
