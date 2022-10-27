@@ -1,11 +1,16 @@
 //do it with DOM api
-function buildCardsUsingDOMAPI(container, data){ //conatiner is product lists
+function buildCardsUsingDOMAPI(container, data){ //container is image lists
     let cardDiv = document.createElement('div');
-    // cardDiv.addEventListener('click', function(ev){
-    //     console.log(ev.target);
-    //     console.log(ev.currentTarget); //allows us to target child classes as well
-    //     ev.currentTarget.style.opacity
-    // })
+    cardDiv.addEventListener('click', function(ev){
+        ev.currentTarget.classList.add("removed");
+    })
+
+    //this event listener will wait for the transition in .img-card to .removed to be complete
+    //then it will run
+    cardDiv.addEventListener("transitionend", function(ev){
+        cardDiv.remove();
+    })
+
     cardDiv.setAttribute('class', 'img-card');
 
     let imgElement = document.createElement('img');
