@@ -30,11 +30,12 @@ function buildCardsUsingDOMAPI(container, data){ //container is image lists
     cardDiv.appendChild(title);
 
     container.appendChild(cardDiv);
-    count++;
 }
 function updateCount(){
     let footer = document.getElementById('index-footer');
+  //  footer.removeChild('photo-count');
     let countElement = document.createElement('p');
+    countElement.setAttribute('class', 'photo-count');
     countElement.appendChild(document.createTextNode(count.toString()));
     footer.appendChild(countElement);
 }
@@ -51,6 +52,7 @@ function fetchProducts(){
             let containerFragment = document.createDocumentFragment();
             photos.forEach(function(img) {
                 buildCardsUsingDOMAPI(container, img);
+                count++;
             })
             container.appendChild(containerFragment);
         })
@@ -58,3 +60,7 @@ function fetchProducts(){
 }
 fetchProducts()
 updateCount()
+document.addEventListener('click', function (e){
+    updateCount();
+})
+

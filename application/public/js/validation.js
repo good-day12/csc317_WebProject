@@ -18,6 +18,10 @@ console.log('printing from external file') //great way for stepway refinement, d
 //     console.log(document.getElementsByTagName('body'));
 // }) use defer in script tag to avoid using this
 
+let usernameValid = new Boolean(false);
+let passwordValid = new Boolean(false);
+let confirmPasswordValid = new Boolean(false);
+
 document.getElementById('Username').addEventListener('input', function(ev){
     let usernameElement = ev.target;
     let username = usernameElement.value; //can use var, var is global scope, let is block scope
@@ -25,9 +29,11 @@ document.getElementById('Username').addEventListener('input', function(ev){
     if(username.length > 3 && validChars.test(username.at(0))){
         usernameElement.classList.add('valid-text');
         usernameElement.classList.remove('invalid-text');
+        usernameValid = true;
     }else {
         usernameElement.classList.add('invalid-text');
         usernameElement.classList.remove('valid-text');
+        usernameValid = false;
     };
 //    console.log(ev.currentTarget); //will get everything in div
 })
@@ -44,10 +50,12 @@ document.getElementById('password').addEventListener('input', function(ev){
     if(validChars.test(password)){
         passwordElement.classList.add('valid-text');
         passwordElement.classList.remove('invalid-text');
+        passwordValid = true;
         pw = password;
     }else {
         passwordElement.classList.add('invalid-text');
         passwordElement.classList.remove('valid-text');
+        passwordValid = false;
     };
     console.log(pw); //will get everything in div
 })
@@ -60,9 +68,24 @@ document.getElementById('confirmPassword').addEventListener('input', function(ev
     if(validChars.test(confirmPassword) && confirmPassword === pw){
         passwordElement.classList.add('valid-text');
         passwordElement.classList.remove('invalid-text');
+        confirmPasswordValid = true;
     }else {
         passwordElement.classList.add('invalid-text');
         passwordElement.classList.remove('valid-text');
+        confirmPasswordValid = false;
     };
 //    console.log(ev.currentTarget); //will get everything in div
+})
+
+//            prevent.stopImmediatePropagation();//prevents alert running more than once
+//            alert("Password confirmation is not acceptable");
+
+document.getElementById('submit').addEventListener('click', function(prevent) {
+    if (!usernameValid || !passwordValid || !confirmPasswordValid) {
+        prevent.preventDefault();
+        if (!usernameValid){
+            alert("Username is not valid, please use only characters a-z, A-Z and have a minimum of three" +
+                "characters");
+        }
+    }
 })
