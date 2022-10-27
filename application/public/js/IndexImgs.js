@@ -1,3 +1,4 @@
+let count = 0;
 //do it with DOM api
 function buildCardsUsingDOMAPI(container, data){ //container is image lists
     let cardDiv = document.createElement('div');
@@ -9,6 +10,8 @@ function buildCardsUsingDOMAPI(container, data){ //container is image lists
     //then it will run
     cardDiv.addEventListener("transitionend", function(ev){
         cardDiv.remove();
+        count--;
+        console.log(count);
     })
 
     cardDiv.setAttribute('class', 'img-card');
@@ -27,6 +30,13 @@ function buildCardsUsingDOMAPI(container, data){ //container is image lists
     cardDiv.appendChild(title);
 
     container.appendChild(cardDiv);
+    count++;
+}
+function updateCount(){
+    let footer = document.getElementById('index-footer');
+    let countElement = document.createElement('p');
+    countElement.appendChild(document.createTextNode(count.toString()));
+    footer.appendChild(countElement);
 }
 
 function fetchProducts(){
@@ -47,3 +57,4 @@ function fetchProducts(){
     //promise syntax - an object that wraps an event that promises to be resolved (run successfully)
 }
 fetchProducts()
+updateCount()
