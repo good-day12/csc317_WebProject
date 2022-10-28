@@ -32,6 +32,7 @@ function buildCardsUsingDOMAPI(container, data){ //container is image lists
     container.appendChild(cardDiv);
 }
 function updateCount(){
+    let container = document.getElementById('img-list');
     let footer = document.getElementById('index-footer');
     if (document.getElementById('photoCount') != null) {
         let childElement = document.getElementById('photoCount');
@@ -63,7 +64,9 @@ function fetchProducts(){
     //promise syntax - an object that wraps an event that promises to be resolved (run successfully)
 }
 fetchProducts()
-updateCount()
+//instead of a setTimeout can I make it so the updateCount function instead waits for the fetchProducts
+//to finsih loading then run?
+setTimeout(updateCount, 100) //put on delay so the count can be updated
 document.addEventListener('click', function (e){
     setTimeout(updateCount, 1001)
 })
