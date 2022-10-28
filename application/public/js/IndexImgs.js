@@ -1,6 +1,7 @@
 let count = 0;
 //do it with DOM api
 function buildCardsUsingDOMAPI(container, data){ //container is image lists
+    count++;
     let cardDiv = document.createElement('div');
     cardDiv.addEventListener('click', function(ev){
         ev.currentTarget.classList.add("removed");
@@ -25,12 +26,10 @@ function buildCardsUsingDOMAPI(container, data){ //container is image lists
     title.appendChild(document.createTextNode(data.title));
 
     //now to link these statements together, do it backwards
-
     cardDiv.appendChild(imgElement);
     cardDiv.appendChild(title);
 
     container.appendChild(cardDiv);
-
 }
 function updateCount(){
     let footer = document.getElementById('index-footer');
@@ -57,7 +56,7 @@ function fetchProducts(){
             let containerFragment = document.createDocumentFragment();
             photos.forEach(function(img) {
                 buildCardsUsingDOMAPI(container, img);
-                count++;
+
             })
             container.appendChild(containerFragment);
         })
@@ -66,6 +65,6 @@ function fetchProducts(){
 fetchProducts()
 updateCount()
 document.addEventListener('click', function (e){
-    updateCount();
+    setTimeout(updateCount, 1001)
 })
 

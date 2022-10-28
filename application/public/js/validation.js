@@ -18,9 +18,9 @@ console.log('printing from external file') //great way for stepway refinement, d
 //     console.log(document.getElementsByTagName('body'));
 // }) use defer in script tag to avoid using this
 
-let usernameValid = new Boolean(false);
-let passwordValid = new Boolean(false);
-let confirmPasswordValid = new Boolean(false);
+let usernameValid = Boolean(false);
+let passwordValid = Boolean(false);
+let confirmPasswordValid = Boolean(false);
 
 document.getElementById('Username').addEventListener('input', function(ev){
     let usernameElement = ev.target;
@@ -74,18 +74,23 @@ document.getElementById('confirmPassword').addEventListener('input', function(ev
         passwordElement.classList.remove('valid-text');
         confirmPasswordValid = false;
     };
-//    console.log(ev.currentTarget); //will get everything in div
 })
 
-//            prevent.stopImmediatePropagation();//prevents alert running more than once
-//            alert("Password confirmation is not acceptable");
 
 document.getElementById('submit').addEventListener('click', function(prevent) {
     if (!usernameValid || !passwordValid || !confirmPasswordValid) {
         prevent.preventDefault();
         if (!usernameValid){
-            alert("Username is not valid, please use only characters a-z, A-Z and have a minimum of three" +
+            alert("Username is not valid, please use only characters a-z or A-Z and have a minimum of three " +
                 "characters");
+        }
+        if (!passwordValid){
+            alert("Password is not valid, enter a password that is 8 or more characters AND contains at least" +
+                "1 upper case letter AND 1 number and 1 of the following special characters: " +
+                "/ * - + ! @ # $ ^ & ~ [ ]");
+        }
+        if (!confirmPasswordValid){
+            alert("Confirm Password does not match original password");
         }
     }
 })
