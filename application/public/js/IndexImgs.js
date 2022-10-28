@@ -30,12 +30,17 @@ function buildCardsUsingDOMAPI(container, data){ //container is image lists
     cardDiv.appendChild(title);
 
     container.appendChild(cardDiv);
+
 }
 function updateCount(){
     let footer = document.getElementById('index-footer');
-  //  footer.removeChild('photo-count');
+    if (document.getElementById('photoCount') != null) {
+        let childElement = document.getElementById('photoCount');
+        footer.removeChild(childElement);
+    }
     let countElement = document.createElement('p');
     countElement.setAttribute('class', 'photo-count');
+    countElement.setAttribute('id', 'photoCount');
     countElement.appendChild(document.createTextNode(count.toString()));
     footer.appendChild(countElement);
 }
