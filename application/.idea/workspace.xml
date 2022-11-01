@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added CSS to fix anchor tags&#10;tried to fix image layout in chrome">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -74,7 +76,9 @@
       <workItem from="1666147915867" duration="91000" />
       <workItem from="1666294507344" duration="10000" />
       <workItem from="1666294590776" duration="3426000" />
-      <workItem from="1667019986957" duration="261000" />
+      <workItem from="1667019986957" duration="456000" />
+      <workItem from="1667326683037" duration="109000" />
+      <workItem from="1667330968952" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="Added all files necessary for assignment">
       <created>1663280421523</created>
