@@ -7,7 +7,7 @@ console.log('printing from external file') //great way for stepway refinement, d
 //can also do alert('help') will show alert, user can silence it eventually
 
 //window registration
-//document registration.html just for document can grab elements, manipulate elements,
+//document registration.hbs just for document can grab elements, manipulate elements,
 // document.getElementById(); //always returns first element with ID value, only returns ONE element
 // document.getElementsByTagName('body'); //returns array like structure with all elements w/ name
 // document.getElementsByClassName() //
