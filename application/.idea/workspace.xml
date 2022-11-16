@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added JavaScript, notes from class Oct 13th">
+    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Added sql code from workbench,&#10;created database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/IndexImgs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/IndexImgs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +42,16 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/html" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,7 +77,14 @@
       <workItem from="1665689283803" duration="3714000" />
       <workItem from="1666147915867" duration="91000" />
       <workItem from="1666294507344" duration="10000" />
-      <workItem from="1666294590776" duration="3010000" />
+      <workItem from="1666294590776" duration="3426000" />
+      <workItem from="1667019986957" duration="456000" />
+      <workItem from="1667326683037" duration="109000" />
+      <workItem from="1667330968952" duration="237000" />
+      <workItem from="1667331637495" duration="2906000" />
+      <workItem from="1667939246029" duration="553000" />
+      <workItem from="1667939976103" duration="523000" />
+      <workItem from="1668472723827" duration="1573000" />
     </task>
     <task id="LOCAL-00001" summary="Added all files necessary for assignment">
       <created>1663280421523</created>
@@ -162,7 +170,42 @@
       <option name="project" value="LOCAL" />
       <updated>1665693707854</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added CSS to fix anchor tags&#10;tried to fix image layout in chrome">
+      <created>1666310901896</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666310901896</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added node on mac">
+      <created>1667331656664</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667331656664</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Notes from class">
+      <created>1667350694487</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667350694487</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added sql code from workbench,&#10;created database">
+      <created>1668476081009</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668476081009</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added sql code from workbench,&#10;created database">
+      <created>1668476145819</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668476145819</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +242,10 @@
     <MESSAGE value="Added CSS styling to all html files" />
     <MESSAGE value="Added JavaScript files, notes from class Oct 11th" />
     <MESSAGE value="Added JavaScript, notes from class Oct 13th" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JavaScript, notes from class Oct 13th" />
+    <MESSAGE value="Added CSS to fix anchor tags&#10;tried to fix image layout in chrome" />
+    <MESSAGE value="Added node on mac" />
+    <MESSAGE value="Notes from class" />
+    <MESSAGE value="Added sql code from workbench,&#10;created database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sql code from workbench,&#10;created database" />
   </component>
 </project>

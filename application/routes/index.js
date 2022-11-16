@@ -6,23 +6,27 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
 });
 
-// router.get("/login", function(req, res){
-//   res.render('login', {css:["style.css"]});
-// });
-router.get("/login", function(req, res){
-  res.render('login');
-});
+router.get('/login', function(req, res){
+  res.send('respond from login get in index.js')
+})
 
-router.get("/register", function(req, res){
-  res.render('registration', {js:["validation.js"]});
-});
+//route protectors, use these to protect post image from unauthorized users posting images
+router.use('/postimage', function( req, res, next){
+  if('user is logged in'){
+    next();
+  } else{
+    res.json({status: 401, message: "Must be logged in to post image"})
+  }
+})
 
-router.get("/postimage", function(req, res){
-  res.render('postimage')
-});
+router.get('/postimage', function(req, res){
+  res.send('respond from postimage get in index.js')
+})
 
-router.get("/posts/:id", function(req, res){
-  res.render('viewposts')
-});
+router.get('/register', function(req, res){
+  res.send('respond from register get in index.js')
+})
+
+
 
 module.exports = router;
