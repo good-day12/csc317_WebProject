@@ -1,3 +1,8 @@
+/*buttons shouldn't span entire page
+all input fields should be the same size
+use flex boxes and grids to fix it
+color schemes with readability*/
+
 html {
   background-color: var(--backGround);
   font-size: 16px;

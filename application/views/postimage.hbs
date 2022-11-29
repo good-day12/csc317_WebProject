@@ -2,7 +2,9 @@
 <main>
     <h2>Post your images here!</h2>
 
-    <form> <!-- Post image form -->
+    <form id = "post-image" class = "input-form"
+    action="/posts/create"
+    enctype = "multipart/form-data"> <!-- Post image form -->
 
         <label for ="PostTitle">Post Title: </label> <br><!-- the post title input field -->
         <input class = input-text type = "text" name = "Post Title" id = PostTitle > <br> <br>

@@ -1,8 +1,12 @@
 var express = require('express');
 var router = express.Router();
+const {getRecentPosts} = require('../middleware/posts');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+/*router.get('/', getRecentPosts ,function(req, res, next) {
+  res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
+});*/
+router.get('/',function(req, res, next) {
   res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
 });
 

@@ -8,6 +8,8 @@ const handlebars = require("express-handlebars");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
+//const postsRouter = require("./")
+
 const app = express();
 
 app.engine(
@@ -36,6 +38,8 @@ app.use("/public", express.static(path.join(__dirname, "public"))); //will only 
 
 app.use("/", indexRouter); // route middleware from ./routes/index.js
 app.use("/users", usersRouter); // route middleware from ./routes/users.js
+
+//app.use("/posts", )
 
 
 /**
