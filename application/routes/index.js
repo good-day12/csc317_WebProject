@@ -11,7 +11,8 @@ router.get('/',function(req, res, next) {
 });
 
 router.get('/login', function(req, res){
-  res.send('respond from login get in index.js')
+  //res.send('respond from login get in index.js')
+  res.render('login');
 })
 
 //route protectors, use these to protect post image from unauthorized users posting images
@@ -24,13 +25,13 @@ router.use('/postimage', function( req, res, next){
 })
 
 router.get('/postimage', function(req, res){
-  res.send('respond from postimage get in index.js')
+  //res.send('respond from postimage get in index.js')
+  res.render('postimage');
 })
 
 router.get('/register', function(req, res){
-  res.send('respond from register get in index.js')
+  //res.send('respond from register get in index.js')
+  res.render('registration');
 })
-
-
 
 module.exports = router;
