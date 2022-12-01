@@ -4,7 +4,10 @@
     <div class = container>
         <div role = "main" >
         <main> <!-- meant to be the main content of page, not to be repeated, should be at top level -->
-            <form>
+            <form
+            action = "/users/login"
+            method = "POST"
+            enctype="application/x-www-form-urlencoded">
                 <h2>Please sign in using your username and password</h2>
                     <!--
                 <img src="https://fakeimg.pl/250x100/" alt="fake image">  empty elements, no closing tag

@@ -6,6 +6,7 @@ const {getRecentPosts} = require('../middleware/posts');
 /*router.get('/', getRecentPosts ,function(req, res, next) {
   res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
 });*/
+
 router.get('/',function(req, res, next) {
   res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
 });
@@ -29,9 +30,13 @@ router.get('/postimage', function(req, res){
   res.render('postimage');
 })
 
+//METHOD: GET
+//localhost:3000/register
 router.get('/register', function(req, res){
   //res.send('respond from register get in index.js')
-  res.render('registration');
+  res.render('registration'/*, {js: ["validation.js"]}*/);
 })
+
+
 
 module.exports = router;

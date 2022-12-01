@@ -1,8 +1,12 @@
 <p class = mContentHeader>Please enter the following information to register: </p>
-            <form>
+            <form
+            method = "POST"
+            action = "/users/register"
+            enctype = "application/x-www-form-urlencoded">
                 <label class = inputEmail for ="email">email</label> <!-- the email input field -->
                 <input class = input-text type = "email" name = "email" id = email placeholder="email">
 
+                <!-- name is for the POST request, gives names for the data given -->
                 <label class = inputUser for ="username">Username</label> <!-- the username input field -->
                 <input class = input-text type = "text" name = "username" id = Username placeholder="Username">
 

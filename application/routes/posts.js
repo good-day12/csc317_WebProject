@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const sharp = require('sharp');
-//const db = require('../conf/database');
+const db = require('../conf/database');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -47,5 +47,15 @@ router.post("/create", upload.singe("uploadImage"), function(req,res,next){
     * })
     * .catch(err => next(err));*/
 })
+
+/*
+* app.post("/users/register", function(req,res){
+* const {username, email, password} = req.body
+* promisePool
+*   .execute('insert into users (usernmae, email, password) value (?,?,?);',[username, email,password])
+*   .then(function([results, fields]){
+*       console.log(results);
+* });
+* })*/
 
 module.exports = router;
