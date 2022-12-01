@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const {isLoggedIn} = require('../middleware/protecters')
 const {getRecentPosts} = require('../middleware/posts');
 
 /* GET home page. */
@@ -25,7 +26,8 @@ router.use('/postimage', function( req, res, next){
   }
 })
 
-router.get('/postimage', function(req, res){
+
+router.get('/postimage', isLoggedIn, function(req, res){
   //res.send('respond from postimage get in index.js')
   res.render('postimage');
 })

@@ -10,7 +10,7 @@ html {
 }
 
 :root{
-  --backGround: #FC4445;
+  --backGround: white; /* #FC4445;*/
   --actionColor: #3FEEE6;
   --secondaryBackGround: #55BCC9;
   --inputBackground: #CAFAFE

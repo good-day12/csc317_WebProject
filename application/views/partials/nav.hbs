@@ -1,7 +1,11 @@
 <nav> <!-- This is our nav bar -->
     <ul class = nav-unorderedList>
         <li><a href="/">Home</a></li>
-        <li><a href="/login">Login</a></li>
+        {{#if isLoggedIn}}
+            <li><a id = 'logout-button' >Log Out</a></li>
+        {{else}}
+            <li><a href="/login">Login</a></li>
+        {{/if}}
         <li><a href="/register">Registration</a></li>
         <li><a href="/postimage">Post Image</a></li>
         <li><a href="/viewposts">View Posts</a></li>

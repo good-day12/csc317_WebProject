@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const db = require('../conf/database');
+const bcrypt = require('bcrypt');
+const UserError = require('../helpers/error/UserError')
 
 // /* GET users listing. */
 // router.get('/', function(req, res, next) {
@@ -25,12 +27,14 @@ router.post("/register", function(req, res, next){
         }
       }).then(function([results, fields]){
         if(results && results.length === 0){
-          //res.send('username does not exits');
-          return db.query('insert into users (username,email,password) value (?,?,?)',
-              [username, email, password])
+          //res.send('username does not exist');
+          return bcrypt.hash(password, 2);
         }else{
           throw new Error('email already exists');
         }
+      }).then(function(hashedPassword){
+      return db.query('insert into users (username,email,password) value (?,?,?)',
+          [username, email, hashedPassword])
       }).then(function([results, fields]){
         if(results && results.affectedRows === 1){
           res.redirect('/login'); //if we succeed go to login page
@@ -50,45 +54,83 @@ router.post("/register", function(req, res, next){
 router.post("/login", function(req, res, next){
   const {username, password} = req.body;
 
-  db.query('select id, username, email from users where username =? AND password = ?',
-      [username, password])
-      .then(function([results,fields]){
+  //put variables here so both functions below can use these
+  let loggedUserId;
+  let loggedUsername;
 
+  db.query('select id, username, password from users where username =?',
+      [username])
+      .then(function([results,fields]){
         if(results && results.length ===1){
-          res.redirect('/');
+            loggedUserId = results[0].id;
+            loggedUsername = results[0].username;
+            let dbPassword = results[0].password; //results[0] gives us first row in results
+            return bcrypt.compare(password, dbPassword);
         }else{
-          throw new Error('Invalid user credentials');
+          throw new UserError('Failed Login: Invalid user credentials', "/login", 200);
         }
-      }).catch(function(err){
-        next(err);
+      }).then(function(passwordsMatched){
+          if(passwordsMatched){
+              req.session.userId = loggedUserId; //don't use id, sessions uses this
+              req.session.username = loggedUsername;
+              req.flash("success", `Hi ${loggedUsername}, you are now logged in`)
+              req.session.save(function(saveErr){
+                  res.redirect('/');
+              })
+          }else{
+              throw new UserError('Failed Login: Invalid user credentials', "/login", 200)
+          }
+  }).catch(function(err){
+      if(err instanceof UserError){
+          req.flash("error", err.getMessage());
+          req.session.save(function (saveErr){
+              res.redirect(err.getRedirectURL());
+          })
+      }else{
+          next(err);
+
+      }
   })
+})
+
+router.post("/logout", function (req, res, next){
+    req.session.destroy(function(destroyError){
+        if(destroyError){
+            next(err);
+        }else{
+            res.json({
+                status: 200,
+                message: "You have been logged out"
+            })
+        }
+    })
 })
 
 router.delete('/login')
 
-router.use('/register', function (req, res, next){
-  if ('is valid data'){
-    next();
-  }else{
-    res.send('invalid user info');
-  }
-})
-
-router.use('/register', function (req, res, next){
-  if ('username does not exist'){
-    next();
-  }else{
-    res.send('username exists already');
-  }
-})
-
-router.use('/register', function (req, res, next){
-  if ('email does not exist'){
-    next();
-  }else{
-    res.send('email exists');
-  }
-})
+// router.use('/register', function (req, res, next){
+//   if ('is valid data'){
+//     next();
+//   }else{
+//     res.send('invalid user info');
+//   }
+// })
+//
+// router.use('/register', function (req, res, next){
+//   if ('username does not exist'){
+//     next();
+//   }else{
+//     res.send('username exists already');
+//   }
+// })
+//
+// router.use('/register', function (req, res, next){
+//   if ('email does not exist'){
+//     next();
+//   }else{
+//     res.send('email exists');
+//   }
+// })
 
 //
 // function validateDAta (req, res, next){
