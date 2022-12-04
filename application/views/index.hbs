@@ -5,18 +5,17 @@
 <main id = "main-content">
     <div>Hello this is my {{title}} and my name is {{name}}</div>
 
-<!--        <div id = "img-list" class = "img-list"> &lt;!&ndash; Where we will show the list of products &ndash;&gt;-->
-<!--    {{!#each results}}-->
-<!--        <div>-->
-<!--            <img src = "{{!this.thumbnail}}" alt = "">-->
-<!--            <p>{{!this.title}}</p>-->
-<!--            <p>{{!this.description}}</p>-->
-<!--            <a href = ".posts/{{!this.id}}"></a>-->
+        <div id = "img-list" class = "img-list"> <!-- Where we will show the list of products -->
+    {{#each results}}
+        <div>
+            <img src = "{{this.thumbnail}}" alt = "" class = "img">
+            <p class = "img-title" >{{this.title}}</p>
+            <p class = "img-description">{{this.description}}</p>
+            <a href = ".posts/{{this.id}}"></a>
 
-<!--        </div>-->
-<!--        {{!log.this}}-->
+        </div>
 
-<!--    {{!/each}}-->
-<!--        </div>-->
+    {{/each}}
+        </div>
 </main>
 

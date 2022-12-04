@@ -4,13 +4,13 @@ const {isLoggedIn} = require('../middleware/protecters')
 const {getRecentPosts} = require('../middleware/posts');
 
 /* GET home page. */
-/*router.get('/', getRecentPosts ,function(req, res, next) {
-  res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
-});*/
-
-router.get('/',function(req, res, next) {
+router.get('/', getRecentPosts ,function(req, res, next) {
   res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
 });
+
+// router.get('/',function(req, res, next) {
+//   res.render('index', { title: 'CSC 317 App', name:"Andre Flores" });
+// });
 
 router.get('/login', function(req, res){
   //res.send('respond from login get in index.js')
@@ -26,7 +26,7 @@ router.use('/postimage', function( req, res, next){
   }
 })
 
-
+//was postimage
 router.get('/postimage', isLoggedIn, function(req, res){
   //res.send('respond from postimage get in index.js')
   res.render('postimage');
