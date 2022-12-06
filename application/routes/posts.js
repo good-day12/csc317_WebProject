@@ -4,6 +4,7 @@ const multer = require('multer');
 const sharp = require('sharp');
 const db = require('../conf/database');
 
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'public/images/uploads')
@@ -41,9 +42,8 @@ router.post("/create", upload.single("uploadImage"), function(req,res,next){
        if(results && results.affectedRows){
            req.flash("success", "Your post has been created!");
            req.session.save(function(saveErr){ //ensure session data is saved before redirect, redirect is faster than save
-               res.redirect('/');
+               res.redirect('/'); //this one is not working?
            })
-           res.redirect('/');
        }
      })
      .catch(err => next(err));

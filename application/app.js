@@ -100,3 +100,9 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
+
+//Office hours questions:
+// search images will not load
+// detailed post view will not work error with route
+//when i create a post the redirect does not work
+//posts.js line 45
