@@ -31,5 +31,20 @@ module.exports = {
                 }
                 next();
             })
+    },
+
+    getCommentsForPostById: function(req, res, next){
+        let postId = req.params.id;
+        let baseSQL = `select c.id, c.text, c.createdAt, u.username
+            FROM comments c
+            JOIN users u
+            ON c.fk_authorId = u.id
+            WHERE fk_postId = ?;`
+        db.execute(baseSQL, [postId])
+            .then(function([results, fields]){
+                res.locals.currentPost.comments = results;
+                next();
+            })
+            .catch(err => next(err))
     }
 }

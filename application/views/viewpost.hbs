@@ -10,7 +10,15 @@
 
       <p class = postDes>Post Description: {{currentPost.description}}</p> <br>
 
+        <p data-postId = {{currentPost.id}}> </p>
+
       <p class = timePosted>
         Date Posted: {{formatDate currentPost.createAt}}
       </p> <br>
+        <div class = "comments" id = "comment-list">
+            {{#each currentPost.comments}}
+                {{> comment this }}
+            {{/each}}
+        </div>
     </main>
+
