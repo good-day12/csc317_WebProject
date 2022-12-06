@@ -21,7 +21,6 @@ const upload = multer({ storage: storage })
 //upload.single("uploadImage"),
 //can add midware function to check if user is logged in
 router.post("/create", upload.single("uploadImage"), function(req,res,next){
-    console.log(req);
     res.send();
     let uploadedFile = req.file.path;//if multer works, will have file object that contains path directory
      let thumbnailName = `thumbnail-${req.file.filename}`
@@ -59,5 +58,28 @@ router.post("/create", upload.single("uploadImage"), function(req,res,next){
 //        console.log(results);
 //     });
 //  })
+
+//if we can't find anything, don't show nothing, tell them there were no results and show recent posts again
+//TODO: add searchTerm to searchBar afterwards
+router.get("/search", function (req, res, next){
+    let searchTerm = `%${req.query.searchTerm}%`
+    let originalSearchTerm = req.query.searchTerm;
+    let baseSQL = `
+            select id, title, description, thumbnail, concat_ws(" ", title, description) as haystack
+            FROM posts
+            HAVING haystack like ?;
+            `
+    db.execute(baseSQL, [searchTerm])
+        .then(function([results, fields]){
+            //error checking here
+            res.locals.results = results;
+            res.locals.searchValue = originalSearchTerm;
+            //can do an info category
+            req.flash("success", `${results.lengt} results found`);
+            req.session.save(function(saveErr){
+                res.render('index');
+            })
+        })
+})
 
 module.exports = router;

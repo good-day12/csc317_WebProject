@@ -1,0 +1,16 @@
+
+    <main class = post>
+
+      <p class = postTitle>Title: {{currentPost.title}}</p>
+
+      <p class = postAuthor>By: {{currentPost.username}} </p>
+
+<!--    for whatever reason this slash is not working for my view posts-->
+      <img class = postPicture src= "/{{currentPost.image}}" alt="fake image">
+
+      <p class = postDes>Post Description: {{currentPost.description}}</p> <br>
+
+      <p class = timePosted>
+        Date Posted: {{formatDate currentPost.createAt}}
+      </p> <br>
+    </main>
