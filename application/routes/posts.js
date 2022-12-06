@@ -60,7 +60,6 @@ router.post("/create", upload.single("uploadImage"), function(req,res,next){
 //  })
 
 //if we can't find anything, don't show nothing, tell them there were no results and show recent posts again
-//TODO: add searchTerm to searchBar afterwards
 router.get("/search", function (req, res, next){
     let searchTerm = `%${req.query.searchTerm}%`
     let originalSearchTerm = req.query.searchTerm;
