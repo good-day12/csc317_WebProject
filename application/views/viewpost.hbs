@@ -1,23 +1,32 @@
 
     <main class = post>
 
-      <p class = postTitle>Title: {{currentPost.title}}</p>
+      <p class = "postTitle" >Title: {{currentPost.title}}</p>
 
-      <p class = postAuthor>By: {{currentPost.username}} </p>
+      <p class = "postAuthor" >By: {{currentPost.username}} </p>
 
 <!--    for whatever reason this slash is not working for my view posts-->
-      <img class = postPicture src= "/{{currentPost.image}}" alt="fake image">
+      <img class = "postPicture" src= "/{{currentPost.image}}" alt="fake image">
 
-      <p class = postDes>Post Description: {{currentPost.description}}</p> <br>
+      <p class = "postDes" >Post Description: {{currentPost.description}}</p> <br>
 
         <p data-postId = {{currentPost.id}}> </p>
 
       <p class = timePosted>
         Date Posted: {{formatDate currentPost.createAt}}
       </p> <br>
+        <div>
+<!--            <form class = "comment-form"-->
+<!--                  method = "GET"-->
+<!--                  action = "/posts/create"-->
+<!--                  enctype="application/x-www-form-urlencoded">-->
+                <textarea id = "comment-text" class = "comment-text" name></textArea>
+                <button type = button id = "comment-button" class = "comment-button" data-postId = {{currentPost.id}}> </button>
+<!--            </form>-->
+        </div>
         <div class = "comments" id = "comment-list">
             {{#each currentPost.comments}}
-                {{> comment this }}
+                {{> comments this }}
             {{/each}}
         </div>
     </main>

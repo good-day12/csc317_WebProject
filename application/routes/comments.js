@@ -10,30 +10,31 @@ router.post("/create", function(req,res,next){
             status: "error",
             message: "You must be logged in"
         })
-    }else{
+    }else {
         let {comment, postId} = req.body;
         let {userId, username} = req.session;
-    }
-    db.execute(`INSERT INTO comments (text, fk_authorId, fk_postId) 
+
+        db.execute(`INSERT INTO comments (text, fk_authorId, fk_postsId)
         value (?,?,?)`, [comment, userId, postId])
-        .then(function([results, fields]){
-            if (results && results.affectedRows ===1){
-                res.json({
-                    status: "success",
-                    message: "Your comment was created",
-                    data: {
-                        comment: comment,
-                        username: username,
-                        commentId: results.insertId
-                    }
-                })
-            }else{
-                res.json({
-                    status: "error",
-                    message: "Comment could not be created"
-                })
-            }
-        })
+            .then(function ([results, fields]) {
+                if (results && results.affectedRows === 1) {
+                    res.json({
+                        status: "success",
+                        message: "Your comment was created",
+                        data: {
+                            comment: comment,
+                            username: username,
+                            commentId: results.insertId
+                        }
+                    })
+                } else {
+                    res.json({
+                        status: "error",
+                        message: "Comment could not be created"
+                    })
+                }
+            })
+    }
 })
 
 

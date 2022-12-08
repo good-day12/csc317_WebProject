@@ -1,11 +1,19 @@
 function addNewComment(data) {
     let commentList = document.getElementById('comment-list');
     let newComment = document.createElement('template');
-    newComment.innerHtml = ``
+    newComment.innerHtml = `<div id = "message-${data.commentId}" class = comment">
+    <strong class = "comment-author">${data.username}</strong>
+    <span class = comment-date">${new Date().toLocaleString("en-US", {
+        timeStyle: "long",
+        dateStyle: "long"
+    })}</span>
+    <div class = "comment-text">${data.comments}</div>
+</div>`;
 
     commentList.append(newComment.content);
-    document.getElementById('message-${data.commentId}')
+    document.getElementById(`message-${data.commentId}`).scrollIntoView();
 }
+
     document.getElementById('comment-button').addEventListener('click', function (ev) {
         let commentTextElement = document.getElementById('comment-text');
         let commentText = commentTextElement.value;
@@ -25,7 +33,6 @@ function addNewComment(data) {
         })
             .then(response => response.json())
             .then(res_json => {
-                console.log(res_json)
                 addNewComment(res_json.data);
             })
     })

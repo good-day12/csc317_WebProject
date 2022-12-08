@@ -17,12 +17,16 @@
     {{> flashmessage}}
   {{/if}}
   {{log this}}
-      <div>
-        {{> header}}
-        {{> nav}}
-        {{{body}}}
-        {{> footer}}
-      </div>
+      <main class = container>
+        <div class = header>
+            {{> header}}
+            {{> nav}}
+        </div>
+        <div class = mainContent>
+            {{{body}}}
+        </div>
+              {{> footer}}
+      </main>
   </body>
 {{#if isLoggedIn}}
     <script>

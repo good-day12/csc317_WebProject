@@ -82,7 +82,7 @@ app.use("/comments", commentsRouter);
 
 /**
  * Catch all route, if we get to here then the 
- * resource requested could not be found.
+ * resources requested could not be found.
  */
 app.use((req,res,next) => {
   next(createError(404, `The route ${req.method} : ${req.url} does not exist.`));
@@ -106,6 +106,7 @@ module.exports = app;
 
 //Office hours questions:
 // search images will not load
-// detailed post view will not work error with route
-//when i create a post the redirect does not work
+//clicking on search results does not work to view posts
+//when i create a post the redirect does not work, goes to blank page
+//new comment will not appear when i submit, only after refresh
 //posts.js line 45

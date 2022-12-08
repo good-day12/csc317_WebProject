@@ -2,20 +2,21 @@
     <h1>Index Page</h1>
 </header>
 
-<body id = "main-content">
+<body id = "main-content" class = mainContent>
     <div>Hello this is my {{title}} and my name is {{name}}</div>
 
-        <div id = "img-list" class = "img-list"> <!-- Where we will show the list of products -->
+        <div id = "img-card" class = "img-card"> <!-- Where we will show the list of products -->
     {{#each results}}
-        <div>
+        <div >
             <img src = "{{this.thumbnail}}" alt = "" class = "img">
-            <p class = "img-title" >{{this.title}}</p>
-            <p class = "img-description">{{this.description}}</p>
-            <a href = "posts/{{this.id}}">Post Details</a>
+            <div class = "img-info">
+                <p class = "img-title" >{{this.title}}</p>
+                <p class = "img-description">{{this.description}}</p>
+                <a href = "posts/{{this.id}}">Post Details</a>
+            </div>
 
         </div>
 
     {{/each}}
         </div>
 </body>
-

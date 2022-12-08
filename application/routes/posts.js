@@ -74,7 +74,7 @@ router.get("/search", function (req, res, next){
             res.locals.results = results;
             res.locals.searchValue = originalSearchTerm;
             //can do an info category
-            req.flash("success", `${results.lengt} results found`);
+            req.flash("success", `${results.length} results found`);
             req.session.save(function(saveErr){
                 res.render('index');
             })
