@@ -107,6 +107,5 @@ module.exports = app;
 //Office hours questions:
 // search images will not load
 //clicking on search results does not work to view posts
-//when i create a post the redirect does not work, goes to blank page
 //new comment will not appear when i submit, only after refresh
 //posts.js line 45

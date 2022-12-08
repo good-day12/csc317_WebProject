@@ -1,13 +1,13 @@
 function addNewComment(data) {
     let commentList = document.getElementById('comment-list');
     let newComment = document.createElement('template');
-    newComment.innerHtml = `<div id = "message-${data.commentId}" class = comment">
+    newComment.innerHTML = `<div id = "message-${data.commentId}" class = comment">
     <strong class = "comment-author">${data.username}</strong>
     <span class = comment-date">${new Date().toLocaleString("en-US", {
         timeStyle: "long",
         dateStyle: "long"
     })}</span>
-    <div class = "comment-text">${data.comments}</div>
+    <div class = "comment-text">${data.comment}</div>
 </div>`;
 
     commentList.append(newComment.content);

@@ -22,7 +22,6 @@ const upload = multer({ storage: storage })
 //upload.single("uploadImage"),
 //can add midware function to check if user is logged in
 router.post("/create", upload.single("uploadImage"), function(req,res,next){
-    res.send();
     let uploadedFile = req.file.path;//if multer works, will have file object that contains path directory
      let thumbnailName = `thumbnail-${req.file.filename}`
      let destinationOfThumbnail = `${req.file.destination}/${thumbnailName}`

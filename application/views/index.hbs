@@ -8,11 +8,11 @@
         <div id = "img-card" class = "img-card"> <!-- Where we will show the list of products -->
     {{#each results}}
         <div >
-            <img src = "{{this.thumbnail}}" alt = "" class = "img">
+            <img src = "/{{this.thumbnail}}" alt = "" class = "img">
             <div class = "img-info">
                 <p class = "img-title" >{{this.title}}</p>
                 <p class = "img-description">{{this.description}}</p>
-                <a href = "posts/{{this.id}}">Post Details</a>
+                <a href = "/posts/{{this.id}}">Post Details</a>
             </div>
 
         </div>
