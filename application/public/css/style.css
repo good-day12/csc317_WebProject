@@ -139,7 +139,8 @@ section {
     "postPicture postPicture"
     "postDes postDes"
     "timePosted timePosted"
-    "commentInput commentInput";
+    "commentInput commentInput"
+    "commentText commentText";
 }
 
 .postTitle {
@@ -162,9 +163,30 @@ section {
 .timePosted{
   grid-area: timePosted;
 }
-.comment-form{
+/*comment-input to hold text box (comment-text) and button (comment-button)*/
+.comment-input{
   grid-area: commentInput;
-  justify-self: left;
+  display: flex;
+  justify-content: center;
+
+}
+
+.comment-button{
+  height: 50%;
+  align-self: center;
+}
+/*Comment-list contains all the comments for a post
+  We will display grid so each comment will have its own margin and padding*/
+.comment-list{
+  grid-area: commentText;
+  margin: 1rem;
+  display: grid;
+}
+.comment{
+  margin: 1rem;
+}
+.comment-text{
+  margin: 1rem;
 }
 
 /*input validation for registration*/
