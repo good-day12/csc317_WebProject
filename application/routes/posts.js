@@ -72,6 +72,17 @@ router.get("/search", function (req, res, next){
             //error checking here
             res.locals.results = results;
             res.locals.searchValue = originalSearchTerm;
+
+            //shorten any long results
+            for(let i = 0; i < results.length; i++){
+                //if description is too long shorten it and add . . . to the end
+                if (results[i].description.length > 50){
+                    results[i].description = results[i].description.substring(0, 50);
+                    let append = "...";
+                    results[i].description += append;
+                }
+            }
+
             //can do an info category
             req.flash("success", `${results.length} results found`);
             req.session.save(function(saveErr){

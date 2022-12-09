@@ -5,9 +5,9 @@
 <body id = "main-content" class = mainContent>
     <div>Hello this is my {{title}} and my name is {{name}}</div>
 
-        <div id = "img-card" class = "img-card"> <!-- Where we will show the list of products -->
+        <div id = "img-container" class = "img-container"> <!-- Where we will show the list of products -->
     {{#each results}}
-        <div >
+        <div id = "img-card" class = "img-card">
             <img src = "/{{this.thumbnail}}" alt = "" class = "img">
             <div class = "img-info">
                 <p class = "img-title" >{{this.title}}</p>

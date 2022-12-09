@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Fixed all my errors with the professor">
-      <change afterPath="$PROJECT_DIR$/public/images/uploads/thumbnail-uploadImage-1670537741564-943392000.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/uploads/thumbnail-uploadImage-1670537894523-175505668.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/uploads/thumbnail-uploadImage-1670538041135-309175686.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/uploads/uploadImage-1670537741564-943392000.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/uploads/uploadImage-1670537894523-175505668.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/uploads/uploadImage-1670537994642-758955851.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/uploads/uploadImage-1670538041135-309175686.jpeg" afterDir="false" />
+    <list default="true" id="d5b9f523-b08b-4a97-858c-aaa98a074a8e" name="Changes" comment="Fixed comments so they look nicer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/comments.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/comments.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/viewpost.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/viewpost.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +98,8 @@
       <workItem from="1669753526784" duration="4323000" />
       <workItem from="1670358435573" duration="3257000" />
       <workItem from="1670531003958" duration="780000" />
-      <workItem from="1670535577597" duration="3053000" />
+      <workItem from="1670535577597" duration="3159000" />
+      <workItem from="1670543521452" duration="3038000" />
     </task>
     <task id="LOCAL-00001" summary="Added all files necessary for assignment">
       <created>1663280421523</created>
@@ -253,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670531731724</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixed comments so they look nicer">
+      <created>1670539460672</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670539460672</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +300,7 @@
     <MESSAGE value="notes from class 11/29" />
     <MESSAGE value="notes from class 12/6" />
     <MESSAGE value="Fixed all my errors with the professor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed all my errors with the professor" />
+    <MESSAGE value="Fixed comments so they look nicer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed comments so they look nicer" />
   </component>
 </project>

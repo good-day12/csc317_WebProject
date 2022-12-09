@@ -54,5 +54,19 @@ module.exports = {
                 next();
             })
             .catch(err => next(err))
+    },
+
+    shortenLongDescriptions: function(req, res, next){
+        let results = req;
+        for(let i = 0; i < results.length; i++){
+            //if description is too long shorten it and add . . . to the end
+            if (results[i].description.length > 50){
+                results[i].description = results[i].description.substring(0, 50);
+                let append = "...";
+                results[i].description += append;
+            }
+        }
+
+        next();
     }
 }
