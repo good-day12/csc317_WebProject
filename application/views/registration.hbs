@@ -1,38 +1,46 @@
 <p class = mContentHeader>Please enter the following information to register: </p>
-            <form
+            <form class = registration-form
             method = "POST"
             action = "/users/register"
             enctype = "application/x-www-form-urlencoded">
-                <label class = inputEmail for ="email">email</label> <!-- the email input field -->
-                <input class = input-text type = "email" name = "email" id = email placeholder="email">
+                <label class = inputEmail for ="email">
+                    email
+                </label> <!-- the email input field -->
+                <input class = input-email type = "email" name = "email" id = email placeholder="email">
 
                 <!-- name is for the POST request, gives names for the data given -->
-                <label class = inputUser for ="username">Username</label> <!-- the username input field -->
-                <input class = input-text type = "text" name = "username" id = Username placeholder="Username">
+                <label class = inputUser for ="username">
+                    Username (must be at least 3 characters)
+                </label> <!-- the username input field -->
+                <input class = input-user type = "text" name = "username" id = Username placeholder="Username">
 
                 <br> <br> <!-- two line breaks for aesthetics -->
 
-                <label class = inputPassword for ="password">Password</label> <!-- the password input field -->
-                <input class = input-text type = "password" name = "password" id = password placeholder="password">
+                <label class = inputPassword for ="password">
+                    Password (must be 8 or more characters AND must contain at least 1 uppercase, 1 number, and 1 special character)
+                </label> <!-- the password input field -->
+                <input class = input-password type = "password" name = "password" id = password placeholder="password">
 
-                <label class = inputConfirmPass for ="confirmPassword">Confirm Password</label> <!-- the password input field -->
-                <input class = input-text type = "password" name = "confirmPassword" id = confirmPassword placeholder="confirm password">
+                <label class = inputConfirmPass for ="confirmPassword">
+                    Confirm Password (must match above password)
+                </label> <!-- the password input field -->
+                <input class = input-ConfirmPass type = "password" name = "confirmPassword" id = confirmPassword placeholder="confirm password">
 
                 <br> <br> <!-- two line breaks for aesthetics -->
 
                 <label class = confirmAge for ="confirmAge">Confirm you are 13 years or older</label>
-                <input type = "checkbox" name = "confirmAge" id = confirmAge required>
+                <input class = confirmAgeBox type = "checkbox" name = "confirmAge" id = confirmAge required>
 
                 <br> <br> <!-- two line breaks for aesthetics -->
 
-                <input class = btn type = "submit" value = "TOS and Privacy Rules" > <!-- The TOS and Privacy button -->
+                <input class = TOSLink type = "submit" value = "TOS and Privacy Rules" > <!-- The TOS and Privacy button -->
                 <br>
                 <label class = TOS for ="confirmTOSagreement">Confirm you agree to the TOS and privacy rules </label>
-                <input type = "checkbox" name = "confirmTOSagreement" id = confirmTOSagreement required>
+                <input class = TOSBox type = "checkbox" name = "confirmTOSagreement" id = confirmTOSagreement required>
 
                 <br> <br> <!-- two line breaks for aesthetics -->
 
-                <input class = submit-btn type = "submit" value = "Submit" id = submit ><!-- The submit button
+                <input class = submit-registration type = "submit" value = "Submit" id = submit ><!-- The submit button
                  <input type = "submit" >
                  <button type = "submit" ></button>-->
             </form>

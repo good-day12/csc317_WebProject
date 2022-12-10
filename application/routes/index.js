@@ -40,7 +40,7 @@ router.get("/posts/:id(\\d+)", getPostById, getCommentsForPostById , function(re
 //localhost:3000/register
 router.get('/register', function(req, res){
   //res.send('respond from register get in index.js')
-  res.render('registration'/*, {js: ["validation.js"]}*/);
+  res.render('registration', {js: ["validation.js"]});
 })
 
 

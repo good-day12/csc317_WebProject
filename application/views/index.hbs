@@ -3,8 +3,6 @@
 </header>
 
 <body id = "main-content" class = mainContent>
-    <div>Hello this is my {{title}} and my name is {{name}}</div>
-
         <div id = "img-container" class = "img-container"> <!-- Where we will show the list of products -->
     {{#each results}}
         <div id = "img-card" class = "img-card">
@@ -14,9 +12,7 @@
                 <p class = "img-description">{{this.description}}</p>
                 <a href = "/posts/{{this.id}}">Post Details</a>
             </div>
-
         </div>
-
     {{/each}}
         </div>
 </body>

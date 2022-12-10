@@ -194,7 +194,91 @@ section {
 .comment-text{
   margin: 1rem;
 }
+/*Registration Form*/
+.registration-form{
+  display: grid;
+  grid-template-areas:
+    "email"
+    "emailInput"
+    "username"
+    "usernameInput"
+    "password"
+    "passwordInput"
+    "confirmPassword"
+    "confirmPasswordInput"
+    "ageCheck"
+    "ageCheckButton"
+    "TosLink"
+    "TosCheck"
+    "TosCheckButton"
+    "submitButton";
+  padding: 1rem;
+}
+.inputEmail{
+  grid-area: email;
+}
+.input-email{
+  grid-area: emailInput;
+  width: 15%;
+  justify-self: center;
+  margin-bottom: 1rem;
+}
+.inputUser{
+  grid-area: username;
+}
+.input-user{
+  grid-area: usernameInput;
+  width: 15%;
+  justify-self: center;
+  margin-bottom: 1rem;
 
+}
+.inputPassword{
+  grid-area: password;
+}
+.input-password{
+  grid-area: passwordInput;
+  width: 15%;
+  justify-self: center;
+  margin-bottom: 1rem;
+
+}
+.inputConfirmPass{
+  grid-area: confirmPassword;
+}
+.input-ConfirmPass{
+  grid-area: confirmPasswordInput;
+  width: 15%;
+  justify-self: center;
+  margin-bottom: 1rem;
+
+}
+.confirmAge{
+  grid-area: ageCheck;
+}
+.confirmAgeBox{
+  grid-area: ageCheckButton;
+  margin-bottom: 1rem;
+
+}
+.TOS{
+  grid-area: TosCheck;
+}
+.TOSBox{
+  grid-area: TosCheckButton;
+  margin-bottom: 1rem;
+
+}
+.submit-registration{
+  grid-area: submitButton;
+  width: 10%;
+  justify-self: center;
+}
+.TOSLink{
+  grid-area: TosLink;
+  width: 10%;
+  justify-self: center;
+}
 /*input validation for registration*/
 input {
 text-align: center;
@@ -214,6 +298,7 @@ text-align: center;
   display: grid;
   grid-area: mcontent;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 /*this image card will contain the image itself and the content of the image*/
 .img-card {
@@ -222,8 +307,8 @@ text-align: center;
     "image"
     "info";
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, .5fr));
-  grid-auto-rows: 30vh;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 15vh;
   gap: 1rem;
   padding: 1em;
 }

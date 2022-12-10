@@ -8,20 +8,21 @@ Please follow the instructions below and fill in the information requested when 
 
 ## Student Information
 
-|               | Information   |
-|:-------------:|:-------------:|
-| Student Name  | name-here     |
-| Student ID    | id-here       |
-| Student Email | email-here    |
+|               |         Information       |
+|:-------------:|:-------------------------:|
+| Student Name  | Andre Flores  		  |
+| Student ID    | 918175055     		  |
+| Student Email | floresandre91@gmail.com   |
 
 
 
 # Build/Run Instructions
 
 ## Build Instructions
-1. steps here
-2. steps here
+1. Go to your terminal and cd to the application file
+2. run the command "npm install"
 
 ## Run Instructions
-1. steps here
-2. steps here 
+1. Go to your terminal and cd to the application file
+2. run the command "npm start"
+3. go to your prefferred browser and use Localhost:3000 for the url
